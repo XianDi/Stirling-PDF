@@ -7,7 +7,8 @@ ENV PUID=1000 \
     UMASK=022 \
     DOCKER_ENABLE_SECURITY=false \
     HOME=/home/stirlingpdfuser \
-    VERSION_TAG=$VERSION_TAG
+    VERSION_TAG=$VERSION_TAG \
+    TZ=Asia/Shanghai
 
 # Create user and group using Alpine's addgroup and adduser
 RUN addgroup -g $PGID stirlingpdfgroup && \
