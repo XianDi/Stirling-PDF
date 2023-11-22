@@ -48,5 +48,13 @@ public class HomeWebController {
             return "User-agent: Googlebot\nDisallow: /\n\nUser-agent: *\nDisallow: /";
         }
     }
+
+    @GetMapping(value="/jd_root.txt",produces = MediaType.TEXT_PLAIN_VALUE)
+    @ResponseBody
+    @Hidden
+    public String getJdRootTxt(){
+        String jdRootFlag = applicationProperties.getSystem().getJdRootFlag();
+        return jdRootFlag;
+    }
     
 }

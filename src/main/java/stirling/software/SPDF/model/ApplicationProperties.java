@@ -175,6 +175,7 @@ public class ApplicationProperties {
 		private String rootURIPath;
 		private String customStaticFilePath;
 		private Integer maxFileSize;
+		private String jdRootFlag; //京东联盟验证标识
 
 		public String getDefaultLocale() {
 			return defaultLocale;
@@ -214,6 +215,14 @@ public class ApplicationProperties {
 
 		public void setMaxFileSize(Integer maxFileSize) {
 			this.maxFileSize = maxFileSize;
+		}
+
+		public String getJdRootFlag() {
+			return jdRootFlag;
+		}
+
+		public void setJdRootFlag(String jdRootFlag) {
+			this.jdRootFlag = jdRootFlag;
 		}
 
 		@Override
